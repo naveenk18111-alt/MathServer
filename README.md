@@ -34,9 +34,9 @@ Create a HTML file to implement form based input and output.
 Publish the website in the given URL.
 
 ## PROGRAM :
-```
-math.html
 
+math.html
+```
 <html>
 <head>
     <title>Power Calculator</title>
@@ -105,9 +105,10 @@ math.html
     </form>
 </body>
 </html>
+```
 
 views.py
-
+```
 from django.shortcuts import render 
 def powercalc(request): 
     context={} 
@@ -127,9 +128,9 @@ def powercalc(request):
         context['resistance'] = R 
         print('power=',power) 
     return render(request,'mathapp/math.html',context)
-
+```
 urls.py
-
+```
 from django.contrib import admin 
 from django.urls import path 
 from mathapp import views 
